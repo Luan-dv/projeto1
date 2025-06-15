@@ -1,1 +1,77 @@
-venv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+env/
+venv/
+ENV/
+.venv/
+.pip-selfcheck.json
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+static_root/
+live_settings.py
+
+# Migrations (opcional — remova se quiser versionar)
+*/migrations/
+!*/migrations/__init__.py
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+*.iml
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Arquivos temporários
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# MyPy / Pyright
+.mypy_cache/
+.pyright/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Docker
+*.pid
+*.sock
+
+# dotenv
+.env
+.env.*
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
