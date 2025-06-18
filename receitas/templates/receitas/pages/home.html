@@ -2,17 +2,18 @@
 
 <body>
 
-  <header class="main-header-container">
-    <div class="main-header container">
-      <h1>
-        <a class=" main-logo" href="/">
-          <i class="fas fa-utensils main-logo-icon"></i> 
-          <span class="main-logo-text">Receitas</span>
-        </a>
-      </h1>
-    </div>
-  
-  </header>
+    {% include 'receitas/partials/header.html' %}
+    {% include 'receitas/partials/search.html' %}
     
-</body>
+    <main class="mainn content-container">
+        <div class="main-content container main-content-list">
+            {% include 'receitas/partials/recipe.html'%}
+
+            
+        </div>
+    </main>
+
+    {% include 'receitas/partials/footer.html'%}
+</body> 
+
 </html>
