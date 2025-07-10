@@ -12,5 +12,4 @@ urlpatterns = [
     path('recipes/<int:id>/', views.recipe, name="recipe"),
     
     
-
 ]

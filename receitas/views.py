@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_list_or_404, get_object_or_404
 from utils.receitas.factory import make_recipe
 from receitas.models import Recipe
-from django.http import Http404
+
 # from django.http import HttpResponse
 # Create your views here.
 
@@ -35,8 +35,10 @@ def category(request, category_id):
 
 
 def recipe(request, id):
+    # recipe = Recipe.objects.filter(id=id, is_published= True,).order_by('-id').first()
+    recipe = get_object_or_404(Recipe, id=id, is_published=True)
     return render(request, 'receitas/pages/recipe-view.html', context={
-        'receita' : make_recipe(),
+        'receita' : recipe,
         'is_detail_page': True,
 
     })
